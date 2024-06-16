@@ -27,3 +27,11 @@ La aplicación se compone de dos proyectos, una web api hecha con .Net Core y un
 2. Hay dos hooks para el manejo de la peticiones, el useFetch y el useSubmit. Ambos reciben como parametro la función para recuperar o enviar datos
 3. Redux se usa para manejar el estado global que muestra y oculta los modals
 
+## Descripción del funcionamiento
+1. En el frontend hay dos rutas, libros y prestamos
+2. La ruta de /libros muestra una tabla con el título y ejemplares disponibles, además de las acciones de prestar, eliminar y agregar
+3. Al agregar un libro, este se mostrará en la tabla despues de cerrar el modal
+4. Al prestar un libro se descontará uno del numeró de disponibles, y en la ruta /prestamos se mostrará un registro con los datos del prestamo
+5. Al eliminar un libro, esté se borrará  del listado, siempre y cuando no exista un prestamo con uno de los ejemplares disponibles
+6. La ruta de /prestamos muestra todos los prestamos activos
+7. Al devolver un libro, el prestamo deaparece y en la tabla de /libros se agrega un ejemplar disponible
